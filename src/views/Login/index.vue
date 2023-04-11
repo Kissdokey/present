@@ -46,6 +46,7 @@ export default {
 
 .login {
   /*弹性布局 让子元素称为弹性项目*/
+  color: pink;
   display: flex;
   /*让弹性项目垂直排列  原理是改变弹性盒子的主轴方向  
 	父元素就是弹性盒子  现在改变后的主轴方向是向下了*/
@@ -60,7 +61,7 @@ export default {
 }
 
 .login h2 {
-  color: #fff;
+  color: pink;
   margin-bottom: 30px;
 }
 .login .login_box {
@@ -75,7 +76,7 @@ export default {
   width: 100%;
   padding: 10px 0;
   margin-bottom: 30px;
-  color: #fff;
+  color: pink;
   font-size: 16px;
   border-bottom: 1px solid #fff;
   /*背景颜色为透明色*/
@@ -87,7 +88,7 @@ export default {
   top: 0;
   left: 0;
   padding: 10px 0;
-  color: #fff;
+  color: pink;
   /*这个属性的默认值是auto 默认是这个元素可以被点击
 	但是如果我们写了none  就是这个元素不能被点击，就好像它可见但是不能用  
 	可望而不可及*/
@@ -108,7 +109,7 @@ export default {
 .login .login_box input:focus + label,
 .login .login_box input:valid + label {
   top: -20px;
-  color: #03e9f4;
+  color: pink;
   font-size: 12px;
 }
 
@@ -116,7 +117,7 @@ export default {
   /*overflow: hidden;*/
   position: relative;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: pink;
   /*取消a表现原有的下划线*/
   text-decoration: none;
   /*同样加个过渡*/
@@ -125,9 +126,9 @@ export default {
 .login a:hover {
   color: #fff;
   border-radius: 5px;
-  background-color: #03e9f4;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
+  background-color: pink;
+  box-shadow: 0 0 5px pink, 0 0 25px pink, 0 0 50px pink,
+    0 0 100px pink;
 }
 .login a span {
   position: absolute;
@@ -138,7 +139,7 @@ export default {
   width: 100%;
   height: 2px;
   /*to right 就是往右边 下面的同理*/
-  background: linear-gradient(to right, transparent, #03e9f4);
+  background: linear-gradient(to right, transparent, pink);
   /*动画 名称  时长 linear是匀速运动 infinite是无限次运动*/
   animation: move1 1s linear infinite;
 }
@@ -147,7 +148,7 @@ export default {
   top: -100%;
   width: 2px;
   height: 100%;
-  background: linear-gradient(transparent, #03e6f4);
+  background: linear-gradient(transparent, pink);
   /*这里多了个0.25s其实是延迟时间*/
   animation: move2 1s linear 0.25s infinite;
 }
@@ -157,7 +158,7 @@ export default {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to left, transparent, #03e9f4);
+  background: linear-gradient(to left, transparent, pink);
 
   animation: move3 1s linear 0.5s infinite;
 }
@@ -167,7 +168,7 @@ export default {
   bottom: -100%;
   width: 2px;
   height: 100%;
-  background: linear-gradient(#03e9f4, transparent);
+  background: linear-gradient(pink, transparent);
   animation: move4 1s linear 0.75s infinite;
 }
 /*写一下动画 */
