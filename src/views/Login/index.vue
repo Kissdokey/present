@@ -1,13 +1,14 @@
 <template>
     <div class="login">
+      <div class='msg'>{{ $store.state.message }}</div>
     <h2>用户登录</h2>
     <div class="login_box">
       <!-- required就是不能为空  必须在css效果中有很大的作用 -->
-      <input v-model="username" type="text" name="name" id="name" required />
+      <input v-model="username" type="text" name="name" id="name" required  @click="userClick"/>
       <label for="name">用户名</label>
     </div>
     <div class="login_box">
-      <input v-model="passsword" type="password" name="pwd" id="pwd" required="required" />
+      <input v-model="passsword" type="password" name="pwd" id="pwd" required="required" @click="pswClick"/>
       <label for="pwd">密码</label>
     </div>
     <a href="javascript:void(0)" @click="onSummit">
@@ -33,16 +34,52 @@ export default {
         console.log(this.username)
         console.log(this.passsword)
         if(this.username==='OkeyDokey'){
-            if(this.passsword==='201902132022050920230403'){
+            if(this.passsword==='111'){
                 this.$store.commit('changeState')
+                this.$router.push('/')
+            }
+            else{
+              this.$store.commit('changeMessage','密码不是这个哦！');
             }
         }
-        this.$router.push('/')
+        else {
+          this.$store.commit('changeMessage','名字你都猜不对哈哈哈！');
+        }
+        
+    },
+    userClick() {
+      this.$store.commit('changeMessage','名字是命运石之门的某个角色的口头禅哦！');
+    },
+    pswClick() {
+      this.$store.commit('changeMessage','密码是什么呢？');
     }
+  },
+  created() {
+    document.body.className = "body-bg";
+  },
+  destroyed() {
+    document.body.className = ''
   }
 };
 </script>
-<style scoped>
+<style >
+.msg {
+  position: fixed;
+  left:10px;
+  bottom: 300px;
+  width: 100px;
+  height:auto;
+  color: white;
+}
+.body-bg {
+  display: flex;
+        justify-content: center;
+        align-items: center;
+        /*让页面始终占浏览器可视区域总高度*/
+        height: 100vh;
+        /*背景渐变色*/
+  background: linear-gradient(rgb(223, 89, 189), #f7f1f1);
+}
 
 .login {
   /*弹性布局 让子元素称为弹性项目*/
