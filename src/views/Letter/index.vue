@@ -3,7 +3,7 @@
         <div class="container">
         <div class="envelope"></div>
         <div class="cover"></div>
-        <div class="card" id="test" @click="goe">  <h1 class="message" >WILL YOU BE MY VALENTINE?</h1>   </div>
+        <div class="card" id="test" @click="goe" :style="bc">  <h1 class="message" >WILL YOU BE MY VALENTINE?</h1>   </div>
         <div class="lid"></div>
         
         <div class="shadow"></div>
@@ -17,7 +17,11 @@
         name: 'LetterPage',
         data() {
             return {
-                chatRecord:[{name:"Okey",msg:"你在干嘛",index:1},{name:"Dokey",msg:"在打游戏",index:2},{name:"Okey",msg:"你在干嘛",index:3},{name:"Dokey",msg:"在打游戏",index:4},{name:"Okey",msg:"你在干嘛",index:1},{name:"Dokey",msg:"在打游戏",index:2},{name:"Okey",msg:"你在干嘛",index:3},{name:"Dokey",msg:"在打游戏",index:4},{name:"Okey",msg:"你在干嘛",index:1},{name:"Dokey",msg:"在打游戏",index:2},{name:"Okey",msg:"你在干嘛",index:3},{name:"Dokey",msg:"在打游戏",index:4},]
+                chatRecord:[{name:"Okey",msg:"你在干嘛",index:1},{name:"Dokey",msg:"在打游戏",index:2},{name:"Okey",msg:"你在干嘛",index:3},{name:"Dokey",msg:"在打游戏",index:4},{name:"Okey",msg:"你在干嘛",index:1},{name:"Dokey",msg:"在打游戏",index:2},{name:"Okey",msg:"你在干嘛",index:3},{name:"Dokey",msg:"在打游戏",index:4},{name:"Okey",msg:"你在干嘛",index:1},{name:"Dokey",msg:"在打游戏",index:2},{name:"Okey",msg:"你在干嘛",index:3},{name:"Dokey",msg:"在打游戏",index:4},],
+                bc: {
+                background: "url(" + require("../../assets/letter.jpg") + ")",
+                "background-size": "100% 100%"
+        }
             }
         },
         methods:{
