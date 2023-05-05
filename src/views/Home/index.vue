@@ -1,5 +1,7 @@
 <style>
- 
+ .app-container {
+  position: relative;
+ }
   .bg-purple-light {
     background: #e5e9f2;
   }
@@ -27,7 +29,6 @@
     min-height: 758px;
   }
   #jjListDiv {
-   position:sticky;
    top:0
   }
  
@@ -35,73 +36,8 @@
  
 <template>
   <div class="app-container">
-    <ul>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-          </ul>
-    <el-row :gutter="15" type="flex" justify="start" >
-      <el-col :span="20">
-        <div id="jjListDiv" class="grid-content bg-purple-light lateral-sliding">
-          <div class="lateral-sliding-item" v-for="(item,index) in 9" :key="index">
-            <div class="each-img">{{index}}</div>
-          </div>
-        </div>
-      </el-col>
-    </el-row>
-    <ul>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-          </ul>
+    
+          <router-link to="/chatRecord">下一个页面</router-link>
   </div>
 </template>
 <script>
@@ -123,18 +59,22 @@
       }
     },
     created() {
- 
+      let dom = document.querySelector("#live2dcanvas");
+      if (dom) {
+        dom.parentElement.removeChild(dom);
+      }
+      let child = document.getElementById("canvas_sakura");
+      child.parentNode.removeChild(child);
     },
  
     mounted() {
-      this.$nextTick(()=>{
-        document.addEventListener('mousewheel',()=>{
-        this.documentObj = document.getElementById('jjListDiv')  
-        this.x = this.documentObj.scrollLeft 
-        this.y = this.documentObj.getBoundingClientRect().top
+     
+        // document.addEventListener('mousewheel',()=>{
+        // this.documentObj = document.getElementById('jjListDiv')  
+        // this.x = this.documentObj.scrollLeft 
+        // this.y = this.documentObj.getBoundingClientRect().right
         console.log(this.y,this.x)
-      })
-      })
+      // })
     },
     beforeDestroy() {
       if (!this.documentObj) return
@@ -143,15 +83,15 @@
     },
     watch: {
       y(y1){
-        if(y1<=0){
+        if(y1<=10){
           this.setScroolFun();
         }
       },
       x(x1){
         if(x1===2364||x1===0){
-          console.log(123)
+          alert(123)
           let dom = document.getElementById('jjListDiv')  
-          dom.style.position='relative'
+          dom.style.position = 'relative'
           this.documentObj.removeEventListener('DOMMouseScroll', this.handlerMouserScroll)
           this.documentObj.removeEventListener('mousewheel', this.handlerMouserScroll)
         }

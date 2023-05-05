@@ -1,48 +1,6 @@
 <template>
     <div >
-      <div class="loading-mask" v-if="isLoad">
-        <div class="keyword-box" >
-          <p>111</p>
-          <p>222</p>
-          <p>333</p>
-          <p>444</p>
-        </div>
-      </div>
-      <div>636e9
-          <ul>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-          </ul>
-          <ul id="vertical">
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-              <li>12</li>
-          </ul>
-          <ul>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-          </ul>
-      </div>
+
     </div>
   </template>
   <script>
@@ -57,6 +15,7 @@
     created() {
       let dom = document.querySelector("#live2dcanvas");
       if (dom) {
+        alert(111)
         dom.parentElement.removeChild(dom);
       }
       let child = document.getElementById("canvas_sakura");
