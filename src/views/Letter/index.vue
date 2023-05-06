@@ -1,13 +1,20 @@
 <template>
     <div class="background">
-        <div class="container">
-        <div class="envelope"></div>
-        <div class="cover"></div>
-        <div class="card" id="test" @click="goe" :style="bc">  <h1 class="message" >WILL YOU BE MY VALENTINE?</h1>   </div>
-        <div class="lid"></div>
+        <div class="card-filp" :class="[this.state === true ? 'card-filp-flip':'']" @click="()=>{this.state = true}">
+            <div class="back">
+                <div class="flower"></div>
+                <div class="stamp"></div>
+                <div class="envelope"></div>
+                <div class="cover"></div>
+                <div class="cover2"></div>
+                <div class="cover3"></div>
+                <div class="card" id="test" @click="goe" :style="bc">  <h1 class="message" >WILL YOU BE MY VALENTINE?</h1>   </div>
+                <div class="lid"></div>       
+                <div class="shadow"></div>
+            </div>
+            <div class="front"></div>
+        </div>
         
-        <div class="shadow"></div>
-    </div>
     <router-link to="/picture">前往相册</router-link>
     </div>
 </template>
@@ -21,7 +28,8 @@
                 bc: {
                 background: "url(" + require("../../assets/letter.jpg") + ")",
                 "background-size": "100% 100%"
-        }
+        },
+        state:false
             }
         },
         methods:{
@@ -58,23 +66,59 @@
 vmin：当前 vw 和 vh 中较小的一个值
 vmax：当前 vw 和 vh 中较大的一个值
 */
-.container {
+
+
+  .card-filp {
+    height: 40vmin;
+    width: 68vmin;
     position: relative;
-    top: 0vmin;
-}
+    z-index: 1000;
+    transform-style:preserve-3d;
+    transition: 1s;
+  }
+
+  .front  {
+    height: 40vmin;
+    width: 68vmin;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility:hidden
+  }
+  .back {
+    height: 40vmin;
+    width: 68vmin;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility:hidden
+  }
+  .front {
+    background: lightgreen;
+  }
+  .back {
+    background: lightblue;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+  .card-filp-flip {
+    transform: rotateY(180deg);
+  }
+
 /*相对定位，并设置背景色和大小*/
 .envelope {
     position: relative;
-    background: #eb7885;
-    height: 30vmin;
-    width: 48vmin;
+    background-color: #f8e7c6;
+    height: 40vmin;
+    width: 68vmin;
 }
 .card {
     position: absolute;
     /*白色的卡片*/
     background: white;
-    height: 25vmin;
-    width: 43vmin;
+    height: 34vmin;
+    width: 63vmin;
     display: flex;
     /*设置div水平显示*/
     flex-direction: column;
@@ -83,7 +127,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     /*设置flex子项在主轴上的中心对齐*/
     justify-content: center;
     left: 2.5vmin;
-    top: 0vmin;
+    top: 0;
     /*卡片落回动画*/
     animation: slide-rev ;
 }
@@ -95,51 +139,94 @@ vmax：当前 vw 和 vh 中较大的一个值
 }
 @keyframes slide {
     100% {
-        transform: translatey(-15vmin);
+        transform: translatey(-20vmin);
         z-index: 2;
     }
 }
 /*卡片落回信封*/
 @keyframes slide-rev {
     from {
-        transform: translatey(-15vmin);
+        transform: translatey(-20vmin);
     }
 }
-.container:hover .card {
+.back:hover .card {
     /*卡片划出动画*/
     animation: slide 0.2s;
     animation-delay: 0.5s;
     /*把卡面动画地从一个地方移动到另一个地方，并让它停留在那里。*/
     animation-fill-mode: forwards;
 }
+
+
+.flower {
+    top: 20vmin;
+    left: 34vmin;
+    transform:translate(-50%,-50%);
+    position: absolute;
+	display:block;
+	width: 150px;
+	height: 150px; 
+	background: url(../images/stitch.png) no-repeat;
+	background-position: 0 0;
+    z-index: 100;
+}
+.stamp {
+    bottom: 0vmin;
+    right: 0vmin;
+    transform: translate(-50%,-50%);
+    position: absolute;
+	display:block;
+	width: 70px;
+	height: 70px; 
+    border-radius: 50% 50%;
+	background: url(../images/istockphoto-166010009-612x612.jpg) no-repeat;
+    background-size:100% 100%;
+	background-position: 0 0;
+    z-index: 100;
+}
 .cover {
     position: absolute;
-    height: 0;
-    width: 0;
-    border-bottom: 15vmin solid #f5b5bb;
-    border-left: 24vmin solid transparent;
-    border-right: 24vmin solid transparent;
-    top: 15vmin;
+    height: 20vmin;
+width: 68vmin;
+background: beige url("../images/bg.png");
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: 20vmin;
     z-index: 3;
+    border: 1px #eae1d5 solid;
+  box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.6), 0 2px 3px -2px rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  color: #837362;
+  text-shadow: 0 1px 0 #fff,0 1px 0 #fff;
 }
-.cover::after { /*left triangle*/
+.cover2 { /*left triangle*/
     position: absolute;
-    content: '';
-    border-left: 24.5vmin solid #ffbbc1;
-    border-bottom: 15vmin solid transparent;
-    border-top: 15vmin solid transparent;
-    top: -15vmin;
-    left: -24vmin;
+    height: 40vmin;
+width: 34vmin;
+background: beige url("../images/bg.png");
+clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+top:0;
+z-index: 3;
+border: 1px #eae1d5 solid;
+  box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.6), 0 2px 3px -2px rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  color: #837362;
+  text-shadow: 0 1px 0 #fff,0 1px 0 #fff;
 }
 
-.cover::before {
+.cover3 {
     position: absolute;
-    content: '';
-    border-right: 24.5vmin solid #ffbbc1;
-    border-bottom: 15vmin solid transparent;
-    border-top: 15vmin solid transparent;
-    top: -15vmin;
-    left: -0.5vmin;
+    height: 40vmin;
+width: 34vmin;
+background: beige url("../images/bg.png");
+clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+top:0;
+right:0;
+z-index: 3;
+border: 1px #eae1d5 solid;
+  box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.6), 0 2px 3px -2px rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  color: #837362;
+  text-shadow: 0 1px 0 #fff,0 1px 0 #fff;
 }
 
 
@@ -157,21 +244,20 @@ vmax：当前 vw 和 vh 中较大的一个值
 }
 
 .lid {
-    position: absolute;
-    height: 0;
-    width: 0;
+position: absolute;
+height: 20vmin;
+width: 68vmin;
+background: beige url("../images/bg.png");
+clip-path: polygon(0 0, 100% 0%, 50% 100%);
+top: 0;
+left: 0;
+/*设置旋转元素的基点位置，为盒子的顶部边缘*/
+transform-origin: top;
+animation: open-rev 2s;
 
-    border-top: 15vmin solid #ff8896;
-    border-left: 24vmin solid transparent;
-    border-right: 24vmin solid transparent;
-
-    top: 0;
-    /*设置旋转元素的基点位置，为盒子的顶部边缘*/
-    transform-origin: top;
-    animation: open-rev 2s;
 }
 
-.container:hover .lid {
+.back:hover .lid {
     animation: open 0.5s;
     animation-fill-mode: forwards;
 }
@@ -182,7 +268,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     border-radius: 50%;
     opacity: 0.7;
     height: 2vmin;
-    width: 48vmin;
+    width: 68vmin;
     background: #e8c5d0;
 }
 </style>
