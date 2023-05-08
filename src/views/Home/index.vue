@@ -26,12 +26,14 @@ export default {
     if (dom) {
       dom.parentElement.removeChild(dom);
     }
-    let child = document.getElementById("canvas_sakura");
-    child.parentNode.removeChild(child);
 
   },
 
   mounted() {
+    let dom = document.querySelector("#live2dcanvas");
+    if (dom) {
+      dom.parentElement.removeChild(dom);
+    }
   },
   beforeDestroy() {
     if (!this.documentObj) return;
