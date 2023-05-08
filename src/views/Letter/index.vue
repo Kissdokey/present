@@ -12,15 +12,31 @@
                 <div class="cover2"></div>
                 <div class="cover3"></div>
                 <div class="card" id="test" @click="goe" >
-                    <h1 class="message">"^1000Dear&nbsp;&nbsp;Ming", 
-				"M^200ing<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夜には^300いつも^200寒いよね、^600でも、^600手を^200繋いでいると、^600暖か^200くなるよ！<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;どんなに^300寒い夜も、^600君と^300二人でいれば、^600ちっとも^300寒くない！<br><br><p style='float:right; display:block; width:80px;'>^1000H^200ao</p>"</h1>
+                    <h1 class="message">To Hui:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;久しぶりに会って、とても懐かしくて、すべての起きているそばにあなたがいない<br>
+                        日はすべて索然として味がなくて、すべてあなたがいないそばの夜に星はすべてもう点<br>
+                        滅しなくなって、3月の桜は私は見に行くことを潔しとしなくて、あなたが私のそばにい<br>
+                        ないため、四月の私は一番楽しかった、あなたと一緒にいるから、散歩さえ幸せだった<br>
+                        、5月に私はあなたの町に行って、私の愛する人を探しに行きます<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        ————Li
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        20230509 
+                    </h1>
                 </div>
                 <div class="lid"></div>
                 <div class="shadow"></div>
             </div>
             <div class="front">
                 <div class="shadow"></div>
-                <h2>To&nbsp;&nbsp;Liu</h2>
+                <h2>To&nbsp;&nbsp;Hui</h2>
                 <div class="stamp" @click="() => {
                         this.frontState = true;
                     }
@@ -74,8 +90,6 @@ export default {
     if (dom) {
       dom.parentElement.removeChild(dom);
     }
-
-
   },
   mounted() {
   },
@@ -93,7 +107,6 @@ export default {
         U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
         U+FEFF, U+FFFD;
 }
-
 /*重置浏览器样式*/
 * {
     margin: 0;
@@ -103,7 +116,6 @@ export default {
     font-size: 100%;
     vertical-align: baseline;
 }
-
 h2 {
     font-size: 5em;
     line-height: 1.6;
@@ -111,7 +123,6 @@ h2 {
     float: left;
     font-family: Satisfy, serif;
 }
-
 .background {
     height: 100vh;
     width: 100vw;
@@ -125,13 +136,11 @@ h2 {
     /*设置flex子项在主轴上的中心对齐*/
     justify-content: center;
 }
-
 /*
 使用相对定位（什么时候用相对定位或绝对定位？在文档流中相对定位的元素占有位置，而且会影响后面的元素（块元素、行内块元素），比如两个div并排，另外一个会换行。而绝对定位就是把该元素从文档流中踢出，不会占用文档流的位置，也不会影响后面的元素。）
 vmin：当前 vw 和 vh 中较小的一个值
 vmax：当前 vw 和 vh 中较大的一个值
 */
-
 .card-filp {
     height: 50vmin;
     width: 100vmin;
@@ -140,7 +149,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     transform-style: preserve-3d;
     transition: 1s;
 }
-
 .front {
     height: 50vmin;
     width: 100vmin;
@@ -158,7 +166,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     justify-content: center;
     backface-visibility: hidden;
 }
-
 .back {
     height: 50vmin;
     width: 100vmin;
@@ -167,22 +174,15 @@ vmax：当前 vw 和 vh 中较大的一个值
     top: 0;
     backface-visibility: hidden;
 }
-
 .front {
     background: beige url("../images/bg.png");
 }
-
-.back {
-}
-
 .back {
     transform: rotateY(180deg);
 }
-
 .card-filp-flip {
     transform: rotateY(180deg);
 }
-
 /*相对定位，并设置背景色和大小*/
 .envelope {
     position: relative;
@@ -192,13 +192,13 @@ vmax：当前 vw 和 vh 中较大的一个值
     height: 50vmin;
     width: 100vmin;
 }
-
 .card {
+    
     position: absolute;
     /*白色的卡片*/
     background: white;
-    font-size: 1em;
-    line-height: 1.6;
+    font-size: 2em;
+    line-height: 2;
     color: #837362;
     float: left;
     font-family: Satisfy, serif;
@@ -210,29 +210,24 @@ vmax：当前 vw 和 vh 中较大的一个值
     /*卡片落回动画*/
     animation: slide-rev;
 }
-
 .card:hover {
     cursor: pointer;
 }
-
 .card:active {
     background: #e8c5d0;
 }
-
 @keyframes slide {
     100% {
-        transform: translatey(-20vmin);
+        transform: translatey(-23vmin);
         z-index: 2;
     }
 }
-
 /*卡片落回信封*/
 @keyframes slide-rev {
     from {
-        transform: translatey(-20vmin);
+        transform: translatey(-23vmin);
     }
 }
-
 .back:hover .card {
     /*卡片划出动画*/
     animation: slide 0.2s;
@@ -240,7 +235,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     /*把卡面动画地从一个地方移动到另一个地方，并让它停留在那里。*/
     animation-fill-mode: forwards;
 }
-
 .flower {
     top: 25vmin;
     left: 50vmin;
@@ -253,7 +247,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     background-position: 0 0;
     z-index: 100;
 }
-
 .stamp {
     bottom: 0vmin;
     right: 0vmin;
@@ -268,13 +261,11 @@ vmax：当前 vw 和 vh 中较大的一个值
     background-position: 0 0;
     z-index: 100;
 }
-
 .stamp:hover {
-    cursor: pointer;
+    cursor:pointer;
     width: 73px;
     height: 73px;
 }
-
 .stampBorder {
     background-color: #fff;
     width: 140px;
@@ -288,14 +279,13 @@ vmax：当前 vw 和 vh 中较大的一个值
     background: url(../images/stampBorder.png) no-repeat;
     background-size: 100% 100%;
 }
-
 .cover {
     position: absolute;
-    height: 26vmin;
+    height: 27.2vmin;
     width: 100vmin;
     background: beige url("../images/bg.png");
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    top: 24vmin;
+    top: 22.9vmin;
     z-index: 3;
     border: 1px #eae1d5 solid;
     box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.6),
@@ -304,7 +294,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     color: #837362;
     text-shadow: 0 1px 0 #fff, 0 1px 0 #fff;
 }
-
 .cover2 {
     /*left triangle*/
     position: absolute;
@@ -321,7 +310,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     color: #837362;
     text-shadow: 0 1px 0 #fff, 0 1px 0 #fff;
 }
-
 .cover3 {
     position: absolute;
     height: 50vmin;
@@ -338,7 +326,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     color: #837362;
     text-shadow: 0 1px 0 #fff, 0 1px 0 #fff;
 }
-
 /*创建信件打开的动画，使用rotateX()，围绕其在给定的度数在x轴旋转*/
 @keyframes open {
     100% {
@@ -349,7 +336,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     box-shadow: none;
     }
 }
-
 /*信件合上的动画*/
 @keyframes open-rev {
     from {
@@ -360,7 +346,6 @@ vmax：当前 vw 和 vh 中较大的一个值
     box-shadow: none;
     }
 }
-
 .lid {
     position: absolute;
     height: 25vmin;
@@ -377,16 +362,13 @@ z-index:4;
         0 2px 3px -2px rgba(0, 0, 0, 0.6);
     padding: 20px 30px;
     color: #837362;
-
     border-radius: 0 0 40px 40px;
 }
-
 .back:hover .lid {
     animation: open 0.5s;
     animation-fill-mode: forwards;
     z-index:1
 }
-
 .shadow {
     position: absolute;
     top: 53vmin;
@@ -396,9 +378,6 @@ z-index:4;
     width: 100vmin;
     background: #e8c5d0;
 }
-
-
-
 .love:before {
     content: "";
     position: absolute;
@@ -409,7 +388,6 @@ z-index:4;
     border-radius: 50%;
     background-color: blue;
 }
-
 .love:after {
     content: "";
     position: absolute;
@@ -420,15 +398,12 @@ z-index:4;
     background-color: yellow;
     border-radius: 50%;
 }
-
 .love:before {
     background-color: pink;
 }
-
 .love:after {
     background-color: pink;
 }
-
 .love {
     position: absolute;
     top:50px;

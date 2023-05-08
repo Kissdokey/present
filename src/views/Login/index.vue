@@ -1,42 +1,71 @@
 <template>
-    <div class="login">
-      <div class='msg'>{{ $store.state.message }}</div>
-    <h2>用户登录</h2>
+  <div>
+    <div class="login" :class="[this.login===true?'loginAni':'']">
+    <h2>验证身份</h2>
     <div class="login_box">
       <!-- required就是不能为空  必须在css效果中有很大的作用 -->
       <input v-model="username" type="text" name="name" id="name" required  @click="userClick"/>
-      <label for="name">用户名</label>
+      <label for="name">名字</label>
     </div>
     <div class="login_box">
       <input v-model="passsword" type="password" name="pwd" id="pwd" required="required" @click="pswClick"/>
       <label for="pwd">密码</label>
     </div>
     <a href="javascript:void(0)" @click="onSummit">
-      登录
+      芝麻开门
       <span></span>
       <span></span>
       <span></span>
       <span></span>
     </a>
   </div>
+    <div class='msg' v-if="this.login===false">{{ $store.state.message }}</div>
+    <div class="login2" :class="[this.login === true ? 'vis':'unvis']"><p>警告</p><p>前方危险确定前往吗？</p> <p><button @click="log">确定</button></p> </div>
+  </div>
+    
 </template>
 <script>
+
 export default {
   name: "Login-page",
   data() {
     return {
         username:'',
-        passsword:''
+        passsword:'',
+        alertMsg: '111',
+        visable: true,
+        login :false,
+        alertBig:false
+    }
+  },
+  mounted() {
+    let dom = document.querySelector("#live2dcanvas");
+      if (dom) {
+       dom.onclick =function(){
+        alert("你是变态吗？！")
+      }
     }
   },
   methods: {
+    log(){
+      this.alertBig = true
+      setTimeout(() => {
+                  this.$router.push('/')
+                }, 2000)
+    },
     onSummit() {
+ 
         console.log(this.username)
         console.log(this.passsword)
         if(this.username==='OkeyDokey'){
-            if(this.passsword==='111'){
-                this.$store.commit('changeState')
-                this.$router.push('/')
+            if(this.passsword==='20230403'){
+              this.login =true
+              this.$store.commit('changeState')   
+              document.body.className = "body-bg2";
+              let dom = document.querySelector("#live2dcanvas");
+              if (dom) {
+                dom.parentElement.removeChild(dom);
+              }           
             }
             else{
               this.$store.commit('changeMessage','密码不是这个哦！');
@@ -48,10 +77,56 @@ export default {
         
     },
     userClick() {
-      this.$store.commit('changeMessage','名字是命运石之门的某个角色的口头禅哦！');
+      if(this.$store.state.nameCount == 0){
+        this.$store.commit('changeMessage','你猜猜名字是什么呢');
+         this.$store.commit('changeNameCount',1);
+      }
+      else if(this.$store.state.nameCount === 1){
+        this.$store.commit('changeMessage','和一部番有关哦');
+        this.$store.commit('changeNameCount',2);
+      }
+      else if(this.$store.state.nameCount === 2){
+        this.$store.commit('changeMessage','番的名字叫做命运石之门');
+        this.$store.commit('changeNameCount',3);
+      }
+      else if(this.$store.state.nameCount === 3){
+        this.$store.commit('changeMessage','答案是里面某个角色的口头禅');
+        this.$store.commit('changeNameCount',4);
+      }
+      else if(this.$store.state.nameCount === 4){
+        this.$store.commit('changeMessage','和你和情侣的QQ名有关');
+        this.$store.commit('changeNameCount',5);
+      }
+      else if(this.$store.state.nameCount === 5){
+        this.$store.commit('changeMessage','笨蛋！居然还想要提示，自己想！');
+        this.$store.commit('changeNameCount',0);
+      }
     },
     pswClick() {
-      this.$store.commit('changeMessage','密码是什么呢？');
+      if(this.$store.state.pswCount === 0){
+        this.$store.commit('changeMessage','你猜猜密码是什么呢');
+        this.$store.commit('changePswCount',1);
+      }
+      else if(this.$store.state.pswCount === 1){
+        this.$store.commit('changeMessage','和日期有关哦');
+        this.$store.commit('changePswCount',2);
+      }
+      else if(this.$store.state.pswCount === 2){
+        this.$store.commit('changeMessage','和见面有关');
+        this.$store.commit('changePswCount',3);
+      }
+      else if(this.$store.state.pswCount === 3){
+        this.$store.commit('changeMessage','和第一次有关');
+        this.$store.commit('changePswCount',4);
+      }
+      else if(this.$store.state.pswCount === 4){
+        this.$store.commit('changeMessage','D O ?');
+        this.$store.commit('changePswCount',5);
+      }
+      else if(this.$store.state.pswCount === 5){
+        this.$store.commit('changeMessage','笨蛋！居然还想要提示，自己想！');
+        this.$store.commit('changePswCount',0);
+      }
     }
   },
   created() {
@@ -63,6 +138,15 @@ export default {
 };
 </script>
 <style >
+.unvis {
+ opacity: 0;
+}
+.vis {
+ opacity: 0;
+ animation: login2 1s ease-in-out;
+ animation-fill-mode: forwards;
+}
+
 .msg {
   position: fixed;
   left:10px;
@@ -80,6 +164,15 @@ export default {
         /*背景渐变色*/
   background: linear-gradient(rgb(223, 89, 189), #f7f1f1);
 }
+.body-bg2{
+  display: flex;
+        justify-content: center;
+        align-items: center;
+        /*让页面始终占浏览器可视区域总高度*/
+        height: 100vh;
+        /*背景渐变色*/
+  background: linear-gradient(rgb(34, 31, 33), #f7f1f1);
+}
 
 .login {
   /*弹性布局 让子元素称为弹性项目*/
@@ -95,8 +188,51 @@ export default {
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 20px 20px;
 }
-
+.login2 {
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height:400px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0);
+  box-shadow: 0 15px 25px rgba(0, 0, 0);
+  border-radius: 20px 20px;
+}
+.loginAni {
+  animation:login 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes  login{
+  50%{
+    transform: scale(1.1)
+  }
+  100%{
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+}
+@keyframes  login2{
+  10%{
+    opacity: 0.3;
+  }
+  40%{
+    opacity: 0.6;
+  }
+  80%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,-500px);
+  }
+  
+}
+  
 .login h2 {
   color: pink;
   margin-bottom: 30px;

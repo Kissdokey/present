@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <style>
-      * {
-        /* cursor: url(https://cdn.jsdelivr.net/gh/mirai-mamori/web-img/img/Ayu.cur), auto; */
-        /*初始化 清除页面元素的内外边距*/
-        padding: 0;
-        margin: 0;
-        /*盒子模型*/
-        box-sizing: border-box;
-      }
-      *:active {
-        /* cursor: url(https://cdn.jsdelivr.net/gh/mirai-mamori/web-img/img/Nor.cur),auto; */
-      }
-    </style>
+
   </head>
     <span class="js-cursor-container"></span>
     <div id="app"></div>
@@ -39,11 +21,11 @@
         },
         "mobile": {
             "show": true,
-            "scale": 0.5
+            "scale": 0.7
         },
         "react": {
-            "opacityDefault": 0.7,
-            "opacityOnHover": 0.2
+            "opacityDefault": 1,
+            "opacityOnHover": 1
         }
     });
 </script>
@@ -51,6 +33,27 @@
 <script  type="text/javascript" src="./tuowei.js"></script>
 <script  type="text/javascript" src="./cursor.js"></script>
   </body>
- 
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      * {
+        cursor: url(https://raw.githubusercontent.com/Kissdokey/present/master/src/assets/miku1.png), auto;
+        /*初始化 清除页面元素的内外边距*/
+        padding: 0;
+        margin: 0;
+        /*盒子模型*/
+        box-sizing: border-box;
+      }
+      *:active {
+        cursor: url(https://raw.githubusercontent.com/Kissdokey/present/master/src/assets/miku2.png),auto;
+      }
+      #live2dcanvas{
+        pointer-events:all !important;
+      }
+    </style>
 </html>
 

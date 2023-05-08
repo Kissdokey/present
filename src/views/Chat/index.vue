@@ -1,7 +1,7 @@
 <template>
     <div>
         <div :class="['chat-box']">
-        <div :class="['chat-header']">OkeyDokey</div>
+        <div :class="['chat-header']" style="cursor: pointer;" @click="()=>this.$router.push('/picture')">OkeyDokey</div>
         <div :class="'chat-container'" >
             <img src="./image/1.jpg"  width="100%" id = '1'>
             <img src="./image/2.jpg"  width="100%" id = '2'>
@@ -40,17 +40,19 @@
         
 
     </div>  
-    <a href="#1">5月7日晚上8点-闲聊</a>
-    <a href="#4">5月8日凌晨0点-前奏</a>
-    <a href="#7">5月8日凌晨3点-渐入佳境</a>
-    <a href="#10">5月8日凌晨5点-角色扮演</a>
-    <a href="#13">5月8日晚上11点-继续扮演</a>
-    <a href="#15">5月9日凌晨0点-情史探讨，互相试探</a>
-    <a href="#19">5月9日凌晨4点-封神！</a>
-    <a href="#21">5月9日凌晨5点-走个流程</a>
-    <a href="#23">5月9日晚上6点-事后</a>
-    <a href="#24">5月9日晚上8点-打电话，头像，情侣标志，晚安</a>
-    <a href="/picture">前往信封</a>
+    <div class="link">
+        <a href="#1" >5月7日晚上8点-闲聊</a><br>
+        <a href="#4">5月8日凌晨0点-前奏</a><br>
+        <a href="#7">5月8日凌晨3点-渐入佳境</a><br>
+        <a href="#10">5月8日凌晨5点-角色扮演</a><br>
+        <a href="#13">5月8日晚上11点-继续扮演</a><br>
+        <a href="#15">5月9日凌晨0点-情史探讨，互相试探</a><br>
+        <a href="#19">5月9日凌晨4点-封神！</a><br>
+        <a href="#21">5月9日凌晨5点-走个流程</a><br>
+        <a href="#23">5月9日晚上6点-事后</a><br>
+        <a href="#24">5月9日晚上8点-打电话，头像，情侣标志，晚安</a><br>
+
+    </div>
     </div>
    
 </template>
@@ -76,6 +78,29 @@
 </script>
 
 <style scoped>
+.link {
+    position: absolute;
+    width:34%;
+    right:0;
+    top:100px;
+}
+.link a:hover  {
+    text-decoration: none;
+    color: pink;
+}
+.link a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.link a:active  {
+    text-decoration: none;
+    color: pink;
+}
+
+
 .chat-box {
     width: 30%;
     margin-left: auto;
