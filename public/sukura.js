@@ -152,8 +152,7 @@ function startSakura() {
 
 window.onresize = function () {
   var canvasSnow = document.getElementById("canvas_snow");
-  canvasSnow.width = window.innerWidth;
-  canvasSnow.height = window.innerHeight;
+
 };
 
 img.onload = function () {

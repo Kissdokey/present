@@ -12,23 +12,15 @@
                 <div class="cover2"></div>
                 <div class="cover3"></div>
                 <div class="card" id="test" @click="goe" >
-                    <h1 class="message">To Hui:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;久しぶりに会って、とても懐かしくて、すべての起きているそばにあなたがいない<br>
-                        日はすべて索然として味がなくて、すべてあなたがいないそばの夜に星はすべてもう点<br>
-                        滅しなくなって、3月の桜は私は見に行くことを潔しとしなくて、あなたが私のそばにい<br>
-                        ないため、四月の私は一番楽しかった、あなたと一緒にいるから、散歩さえ幸せだった<br>
-                        、5月に私はあなたの町に行って、私の愛する人を探しに行きます<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        ————Li
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h1 class="message">To Hui:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;久しぶりに会って、とても懐かしくて、すべての起きているそばにあなたがいない
+                        日はすべて索然として味がなくて、すべてあなたがいないそばの夜に星はすべてもう点
+                        滅しなくなって、3月の桜は私は見に行くことを潔しとしなくて、あなたが私のそばにい
+                        ないため、四月の私は一番楽しかった、あなたと一緒にいるから、散歩さえ幸せだった
+                        、5月に私はあなたの町に行って、私の愛する人を探しに行きます
+                       
                         20230509 
+
+ 
                     </h1>
                 </div>
                 <div class="lid"></div>
@@ -198,7 +190,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     /*白色的卡片*/
     background: white;
     font-size: 2em;
-    line-height: 2;
+    line-height: 1.4;
     color: #837362;
     float: left;
     font-family: Satisfy, serif;
@@ -235,6 +227,12 @@ vmax：当前 vw 和 vh 中较大的一个值
     /*把卡面动画地从一个地方移动到另一个地方，并让它停留在那里。*/
     animation-fill-mode: forwards;
 }
+.back:hover .flower {
+    animation: open2 0.2s;
+    animation-delay: 0.5s;
+    /*把卡面动画地从一个地方移动到另一个地方，并让它停留在那里。*/
+    animation-fill-mode: forwards;
+}
 .flower {
     top: 25vmin;
     left: 50vmin;
@@ -246,7 +244,9 @@ vmax：当前 vw 和 vh 中较大的一个值
     background: url(../images/stitch.png) no-repeat;
     background-position: 0 0;
     z-index: 100;
+
 }
+
 .stamp {
     bottom: 0vmin;
     right: 0vmin;
@@ -345,7 +345,12 @@ vmax：当前 vw 和 vh 中较大的一个值
         border-top: 1px solid #7B6C5C;
     box-shadow: none;
     }
+}@keyframes open2 {
+    100% {    
+        transform: translate(-50%,-40%);     
+    }
 }
+/*信件合上的动画*/
 .lid {
     position: absolute;
     height: 25vmin;

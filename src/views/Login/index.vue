@@ -150,7 +150,7 @@ export default {
 .msg {
   position: fixed;
   left:10px;
-  bottom: 300px;
+  bottom: 200px;
   width: 100px;
   height:auto;
   color: white;
@@ -228,7 +228,7 @@ export default {
   }
   100%{
     opacity: 1;
-    transform: translate(0,-500px);
+    transform: translate(0,-300px);
   }
   
 }

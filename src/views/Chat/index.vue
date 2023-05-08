@@ -40,12 +40,14 @@
         
 
     </div>  
-    <div class="link">
+    <div class="link2">
         <a href="#1" >5月7日晚上8点-闲聊</a><br>
         <a href="#4">5月8日凌晨0点-前奏</a><br>
         <a href="#7">5月8日凌晨3点-渐入佳境</a><br>
         <a href="#10">5月8日凌晨5点-角色扮演</a><br>
         <a href="#13">5月8日晚上11点-继续扮演</a><br>
+    </div>
+    <div class="link">
         <a href="#15">5月9日凌晨0点-情史探讨，互相试探</a><br>
         <a href="#19">5月9日凌晨4点-封神！</a><br>
         <a href="#21">5月9日凌晨5点-走个流程</a><br>
@@ -71,13 +73,13 @@
         if (dom) {
             dom.parentElement.removeChild(dom);
         }
-        let child = document.getElementById("canvas_sakura");
-        child.parentNode.removeChild(child);
+
     },
 }
 </script>
 
 <style scoped>
+
 .link {
     position: absolute;
     width:34%;
@@ -89,13 +91,40 @@
     color: pink;
 }
 .link a{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
     text-decoration: none;
     color: black;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-right: 10px;
 }
 .link a:active  {
+    text-decoration: none;
+    color: pink;
+}
+.link2 {
+    position: absolute;
+    width:34%;
+    left:0;
+    top:100px;
+}
+.link2 a:hover  {
+    text-decoration: none;
+    color: pink;
+}
+.link2 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+    margin-top: 1px;
+    margin-right: 10px;
+}
+.link2 a:active  {
     text-decoration: none;
     color: pink;
 }
@@ -105,7 +134,7 @@
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    height: 90vh;
+    height: 80vh;
     border: 1px rgb(177, 168, 168) solid;
     background-color: #f7f2f2;
     border-radius: 8px 8px;
