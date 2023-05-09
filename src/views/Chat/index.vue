@@ -94,10 +94,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: medium;
+    font-size: large;
     text-decoration: none;
+    font-weight: 700;
     color: black;
-    margin-top: 1px;
+    margin-top: 30px;
     margin-right: 10px;
 }
 .link a:active  {
@@ -118,10 +119,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: medium;
+    font-size: large;
+    font-weight: 700;
     text-decoration: none;
     color: black;
-    margin-top: 1px;
+    margin-top: 30px;
     margin-right: 10px;
 }
 .link2 a:active  {
@@ -134,7 +136,7 @@
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    height: 80vh;
+    height: 90vh;
     border: 1px rgb(177, 168, 168) solid;
     background-color: #f7f2f2;
     border-radius: 8px 8px;
@@ -146,8 +148,9 @@
     position: absolute;
     top:0;
     width:30%;
-    height:40Px;
+    height:50Px;
     display: flex;
+    font-weight: 900;
     align-items: center;
     justify-content: center;
     font-size: larger;

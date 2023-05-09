@@ -97,6 +97,7 @@ export default {
 
 .body {
     height:100vh;
+    background: beige url("./chuyin.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,8 +105,8 @@ export default {
 
 .Container {
   margin: 4% auto;
-  width: 240px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   position: relative;
   perspective: 1000px;
   display: flex;

@@ -11,7 +11,7 @@
                 <div class="cover"></div>
                 <div class="cover2"></div>
                 <div class="cover3"></div>
-                <div class="card" id="test" @click="goe" >
+                <div class="card" id="test"  @click="goe">
                     <h1 class="message">To Hui:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;久しぶりに会って、とても懐かしくて、すべての起きているそばにあなたがいない
                         日はすべて索然として味がなくて、すべてあなたがいないそばの夜に星はすべてもう点
                         滅しなくなって、3月の桜は私は見に行くことを潔しとしなくて、あなたが私のそばにい
@@ -189,7 +189,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     position: absolute;
     /*白色的卡片*/
     background: white;
-    font-size: 2em;
+    font-size: 2.5em;
     line-height: 1.4;
     color: #837362;
     float: left;

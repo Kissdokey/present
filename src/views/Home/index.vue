@@ -3,7 +3,7 @@
           <div class="keyword-box">
             <p>2023年</p>
             <p>五月</p>
-            <p>9日</p>
+            <p>九日</p>
             <p>LOVEFOREVE</p>
           </div>
         </div>

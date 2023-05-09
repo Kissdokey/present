@@ -20,7 +20,7 @@
     </a>
   </div>
     <div class='msg' v-if="this.login===false">{{ $store.state.message }}</div>
-    <div class="login2" :class="[this.login === true ? 'vis':'unvis']"><p>警告</p><p>前方危险确定前往吗？</p> <p><button @click="log">确定</button></p> </div>
+    <div class="login2" :class="[this.login === true ? 'vis':'unvis']"><p>警告</p><p>前方危险确定前往吗？</p> <p><button style="cursor: pointer;" @click="log">确定</button></p> </div>
   </div>
     
 </template>
@@ -150,7 +150,7 @@ export default {
 .msg {
   position: fixed;
   left:10px;
-  bottom: 200px;
+  bottom: 300px;
   width: 100px;
   height:auto;
   color: white;
@@ -228,7 +228,7 @@ export default {
   }
   100%{
     opacity: 1;
-    transform: translate(0,-300px);
+    transform: translate(0,-500px);
   }
   
 }
