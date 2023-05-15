@@ -62,7 +62,6 @@ export default {
                 { name: "Dokey", msg: "在打游戏", index: 4 },
             ],
             bc: {
-                background: "url(" + require("../../assets/letter.jpg") + ")",
                 "background-size": "100% 100%",
             },
             frontState: false,
