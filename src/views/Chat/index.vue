@@ -3,37 +3,37 @@
         <div :class="['chat-box']">
         <div :class="['chat-header']" style="cursor: pointer;" @click="()=>this.$router.push('/picture')">OkeyDokey</div>
         <div :class="'chat-container'" >
-            <img src="./image/1.jpg"  width="100%" id = '1'>
-            <img src="./image/2.jpg"  width="100%" id = '2'>
-            <img src="./image/3.jpg"  width="100%" id = '3'>
-            <img src="./image/4.jpg"  width="100%" id = '4'>
-            <img src="./image/5.jpg"  width="100%" id = '5'>
-            <img src="./image/6.jpg"  width="100%" id = '6'>
-            <img src="./image/7.jpg"  width="100%" id = '7'>
-            <img src="./image/8.jpg"  width="100%" id = '8'>
-            <img src="./image/9.jpg"  width="100%" id = '9'>
-            <img src="./image/10.jpg"  width="100%" id = '10'>
-            <img src="./image/11.jpg"  width="100%" id = '11'>
-            <img src="./image/12.jpg"  width="100%" id = '12'>
-            <img src="./image/13.jpg"  width="100%" id = '13'>
-            <img src="./image/14.jpg"  width="100%" id = '14'>
-            <img src="./image/15.jpg"  width="100%" id = '15'>
-            <img src="./image/16.jpg"  width="100%" id = '16'>
-            <img src="./image/17.jpg"  width="100%" id = '17'>
-            <img src="./image/18.jpg"  width="100%" id = '18'>
-            <img src="./image/19.jpg"  width="100%" id = '19'>
-            <img src="./image/20.jpg"  width="100%" id = '20'>
-            <img src="./image/21.jpg"  width="100%" id = '21'>
-            <img src="./image/22.jpg"  width="100%" id = '22'>
-            <img src="./image/23.jpg"  width="100%" id = '23'>
-            <img src="./image/24.jpg"  width="100%" id = '24'>
-            <img src="./image/25.jpg"  width="100%" id = '25'>
-            <img src="./image/26.jpg"  width="100%" id = '26'>
-            <img src="./image/27.jpg"  width="100%" id = '27'>
-            <img src="./image/28.jpg"  width="100%" id = '28'>
-            <img src="./image/29.jpg"  width="100%" id = '29'>
-            <img src="./image/30.jpg"  width="100%" id = '30'>
-            <img src="./image/31.jpg"  width="100%" id = '31'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/1.jpg?raw=true"  width="100%" id = '1'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/2.jpg?raw=true"  width="100%" id = '2'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/3.jpg?raw=true"  width="100%" id = '3'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/4.jpg?raw=true"  width="100%" id = '4'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/5.jpg?raw=true"  width="100%" id = '5'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/6.jpg?raw=true"  width="100%" id = '6'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/7.jpg?raw=true"  width="100%" id = '7'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/8.jpg?raw=true"  width="100%" id = '8'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/9.jpg?raw=true"  width="100%" id = '9'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/10.jpg?raw=true"  width="100%" id = '10'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/11.jpg?raw=true"  width="100%" id = '11'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/12.jpg?raw=true"  width="100%" id = '12'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/13.jpg?raw=true"  width="100%" id = '13'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/14.jpg?raw=true"  width="100%" id = '14'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/15.jpg?raw=true"  width="100%" id = '15'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/16.jpg?raw=true"  width="100%" id = '16'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/17.jpg?raw=true"  width="100%" id = '17'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/18.jpg?raw=true"  width="100%" id = '18'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/19.jpg?raw=true"  width="100%" id = '19'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/20.jpg?raw=true"  width="100%" id = '20'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/21.jpg?raw=true"  width="100%" id = '21'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/22.jpg?raw=true"  width="100%" id = '22'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/23.jpg?raw=true"  width="100%" id = '23'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/24.jpg?raw=true"  width="100%" id = '24'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/25.jpg?raw=true"  width="100%" id = '25'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/26.jpg?raw=true"  width="100%" id = '26'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/27.jpg?raw=true"  width="100%" id = '27'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/28.jpg?raw=true"  width="100%" id = '28'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/29.jpg?raw=true"  width="100%" id = '29'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/30.jpg?raw=true"  width="100%" id = '30'>
+            <img src="https://github.com/Kissdokey/present/blob/master/src/views/Chat/image/31.jpg?raw=true"  width="100%" id = '31'>
         </div>
         <div :class="'chat-footer'"></div>
     

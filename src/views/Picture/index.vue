@@ -18,41 +18,40 @@
     <div class="Container">
       
       <div id="show_jpg">
-        <figure><img src="./image/MTXX_formula20230507_173141590.jpg" @click="show(0)"/></figure>
-        <figure><img src="./image/MTXX_MH20230507_172642418.jpg" @click="show(1)"/></figure>
-        <figure><img src="./image/MTXX_MH20230507_174702853.jpg" @click="show(2)"/></figure>
-        <figure><img src="./image/MTXX_MR20230507_174255043.jpg" @click="show(3)"/></figure>
-        <figure><img src="./image/MTXX_MR20230507_175317545.jpg" @click="show(4)"/></figure>
-        <figure><img src="./image/MTXX_MR20230507_175738850.jpg" @click="show(5)"/></figure>
-        <figure><img src="./image/MTXX_MR20230507_180125726.jpg" @click="show(6)"/></figure>
-        <figure><img src="./image/1.jpg" @click="show(7)"/></figure>
-        <figure><img src="./image/2.jpg" @click="show(8)"/></figure>
-        <figure><img src="./image/3.jpg" @click="show(9)"/></figure>
-        <figure><img src="./image/4.jpg" @click="show(10)"/></figure>
-        <figure><img src="./image/5.jpg" @click="show(11)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_formula20230507_173141590.jpg?raw=true" @click="show(0)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MH20230507_172642418.jpg?raw=true" @click="show(1)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MH20230507_174702853.jpg?raw=true" @click="show(2)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_174255043.jpg?raw=true" @click="show(3)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_175317545.jpg?raw=true" @click="show(4)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_175738850.jpg?raw=true" @click="show(5)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_180125726.jpg?raw=true" @click="show(6)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/1.jpg?raw=true" @click="show(7)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/2.jpg?raw=true" @click="show(8)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/3.jpg?raw=true" @click="show(9)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/4.jpg?raw=true" @click="show(10)"/></figure>
+        <figure><img src="https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/5.jpg?raw=true" @click="show(11)"/></figure>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
     name: 'PicturePage',
     data(){
       return{
         isShow:false,
-        src0:require("./image/MTXX_formula20230507_173141590.jpg"),
-        src1:require("./image/MTXX_MH20230507_172642418.jpg"),
-        src2:require("./image/MTXX_MH20230507_174702853.jpg"),
-        src3:require("./image/MTXX_MR20230507_174255043.jpg"),
-        src4:require("./image/MTXX_MR20230507_175317545.jpg"),
-        src5:require("./image/MTXX_MR20230507_175738850.jpg"),
-        src6:require("./image/MTXX_MR20230507_180125726.jpg"),
-        src7:require("./image/1.jpg"),
-        src8:require("./image/2.jpg"),
-        src9:require("./image/3.jpg"),
-        src10:require("./image/4.jpg"),
-        src11:require("./image/5.jpg"),
+        src0:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_formula20230507_173141590.jpg?raw=true",
+        src1:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MH20230507_172642418.jpg?raw=true",
+        src2:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MH20230507_174702853.jpg?raw=true",
+        src3:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_174255043.jpg?raw=true",
+        src4:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_175317545.jpg?raw=true",
+        src5:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_175738850.jpg?raw=true",
+        src6:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/MTXX_MR20230507_180125726.jpg?raw=true",
+        src7:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/1.jpg?raw=true",
+        src8:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/2.jpg?raw=true",
+        src9:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/3.jpg?raw=true",
+        src10:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/4.jpg?raw=true",
+        src11:"https://github.com/Kissdokey/present/blob/master/src/views/Picture/image/5.jpg?raw=true",
         i:0
       }
     },
@@ -98,7 +97,7 @@ export default {
 .body {
   width:100vw;
     height:100vh;
-    background-image:url(./chuyin.jpg); 
+    background-image:url("https://github.com/Kissdokey/present/blob/master/src/views/Picture/chuyin.jpg?raw=true"); 
     background-size: 100% 100%;
   display: flex;
   align-items: center;

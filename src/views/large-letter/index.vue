@@ -83,7 +83,7 @@ export default {
   height: 100vh;
   width: 100%;
   z-index: -10;
-  background: beige url("../images/bg.png");
+  background: beige url("https://github.com/Kissdokey/present/blob/master/src/views/images/bg.png?raw=true");
 }
 .letter-background ul {
   padding: 70px;

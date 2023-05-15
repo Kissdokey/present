@@ -166,7 +166,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     backface-visibility: hidden;
 }
 .front {
-    background: beige url("../images/bg.png");
+    background: beige url("https://github.com/Kissdokey/present/blob/master/src/views/images/bg.png?raw=true");
 }
 .back {
     transform: rotateY(180deg);
@@ -240,7 +240,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     display: block;
     width: 150px;
     height: 150px;
-    background: url(../images/stitch.png) no-repeat;
+    background: url("https://github.com/Kissdokey/present/blob/master/src/views/images/stitch.png?raw=true") no-repeat;
     background-position: 0 0;
     z-index: 100;
 
@@ -255,7 +255,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     width: 70px;
     height: 70px;
     border-radius: 50% 50%;
-    background: url(../images/istockphoto-166010009-612x612.jpg) no-repeat;
+    background: url("https://github.com/Kissdokey/present/blob/master/src/views/images/istockphoto-166010009-612x612.jpg?raw=true") no-repeat;
     background-size: 100% 100%;
     background-position: 0 0;
     z-index: 100;
@@ -275,14 +275,14 @@ vmax：当前 vw 和 vh 中较大的一个值
     justify-content: center;
     top: 0;
     right: 0;
-    background: url(../images/stampBorder.png) no-repeat;
+    background: url("https://github.com/Kissdokey/present/blob/master/src/views/images/stampBorder.png?raw=true") no-repeat;
     background-size: 100% 100%;
 }
 .cover {
     position: absolute;
     height: 27.2vmin;
     width: 100vmin;
-    background: beige url("../images/bg.png");
+    background: beige url("https://github.com/Kissdokey/present/blob/master/src/views/images/bg.png?raw=true");
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     top: 22.9vmin;
     z-index: 3;
@@ -298,7 +298,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     position: absolute;
     height: 50vmin;
     width: 50vmin;
-    background: beige url("../images/bg.png");
+    background: beige url("https://github.com/Kissdokey/present/blob/master/src/views/images/bg.png?raw=true");
     clip-path: polygon(0% 5%,0% 100%, 100% 50%);
     top: 0;
     z-index: 3;
@@ -313,7 +313,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     position: absolute;
     height: 50vmin;
     width: 50vmin;
-    background: beige url("../images/bg.png");
+    background: beige url("https://github.com/Kissdokey/present/blob/master/src/views/images/bg.png?raw=true");
     clip-path: polygon(100% 5%, 0% 50%, 100% 100%);
     top: 0;
     right: 0;
@@ -354,7 +354,7 @@ vmax：当前 vw 和 vh 中较大的一个值
     position: absolute;
     height: 25vmin;
     width: 100vmin;
-    background: beige url("../images/bg.png");
+    background: beige url("https://github.com/Kissdokey/present/blob/master/src/views/images/bg.png?raw=true");
 z-index:4;
     top: 0;
     left: 0;
